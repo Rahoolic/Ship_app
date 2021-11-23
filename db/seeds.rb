@@ -54,7 +54,8 @@ users.each do |user|
     Boat.create!(
       user: user,
       title: Faker::Name.name,
-      description: Faker::Lorem.paragraph(sentence_count: 3)
+      description: Faker::Lorem.paragraph(sentence_count: 3),
+      price_per_day: Faker::Number.decimal(l_digits: 3)
     )
   end
 end
