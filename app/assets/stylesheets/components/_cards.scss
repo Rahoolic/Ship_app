@@ -1,0 +1,15 @@
+.boat-card {
+  margin: 10px 40px;
+}
+
+.banner-card {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://d18mr9iuob0gar.cloudfront.net/media/boats/2016/10/rental-Motor-boat-Princess-72feet-Lisbon-PT_ndZ2wvC.jpg);
+}
+
+.card-trip-infos {
+  display: flex;
+  justify-content: space-between;
+}

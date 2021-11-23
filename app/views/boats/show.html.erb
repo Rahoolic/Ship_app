@@ -1,5 +1,12 @@
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+<div class="boat-card">
+  <div class="banner-card">
+  </div>
   <div class="card-trip-infos">
     <div>
       <h2>Title: <%= @boat.title %></h2>
@@ -7,6 +14,7 @@
       <%= link_to 'Edit', edit_boat_path(@boat) %> |
       <%= link_to 'Back', boats_path %>
     </div>
-    <h2 class="card-trip-pricing"><%= @boat.price_per_day %></h2>
+    <h2 class="card-trip-pricing"><%= @boat.price_per_day %>$</h2>
+    </div>
   </div>
 </div>
