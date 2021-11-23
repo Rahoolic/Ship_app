@@ -1,12 +1,15 @@
-<ul>
-  <% @boats.each do |boat| %>
-    ==============================================================
-    <li><p>User: <%= boat.user %></p></li>
-    <li><p>Boat name: <%= boat.title %></p></li>
-    <li><p>Description: <%= boat.description %></p></li>
-    <li><p>Price per day: <%= boat.price_per_day %>$</p></li>
-    ==============================================================
-  <% end %>
-</ul>
-
+<% @boats.each do |boat| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <ul>
+        <li><p>User: <%= boat.user %></p></li>
+        <li><p>Boat name: <%= boat.title %></p></li>
+        <li><p>Location: <%= boat.location %></p></li>
+        <li><p>Description: <%= boat.description %></p></li>
+        <li><p>Price per day: <%= boat.price_per_day %>$</p></li>
+      </ul>
+    </div>
+  </div>
+<% end %>
 <%= link_to 'Back', root_path %>
