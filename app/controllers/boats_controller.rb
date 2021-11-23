@@ -5,6 +5,5 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find(params[:id])
-    authorize @boat
   end
 end
