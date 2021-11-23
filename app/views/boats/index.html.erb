@@ -1,5 +1,12 @@
 <ul>
   <% @boats.each do |boat| %>
-    <li><%= boat %></li>
+    ==============================================================
+    <li><p>User: <%= boat.user %></p></li>
+    <li><p>Boat name: <%= boat.title %></p></li>
+    <li><p>Description: <%= boat.description %></p></li>
+    <li><p>Price per day: <%= boat.price_per_day %>$</p></li>
+    ==============================================================
   <% end %>
 </ul>
+
+<%= link_to 'Back', root_path %>
