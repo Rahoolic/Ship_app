@@ -8,5 +8,15 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width:100%;
 }
+
+.navbar-brand {
+  // height: 40px;
+  width: 150px;
+}
+
+.active .nav-link {
+  border-bottom: solid 3px orange;
+}
+
