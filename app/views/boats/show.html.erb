@@ -1,18 +1,12 @@
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-
-  <%= @boat.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-
-
-  <%= @boat.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_boat_path(@boat) %> |
-<%= link_to 'Back', boats_path %>
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Title: <%= @boat.title %></h2>
+      <p>Owner-id: <%= @boat.user_id %></p>
+      <%= link_to 'Edit', edit_boat_path(@boat) %> |
+      <%= link_to 'Back', boats_path %>
+    </div>
+    <h2 class="card-trip-pricing"><%= @boat.price_per_day %></h2>
+  </div>
+</div>
