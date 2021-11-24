@@ -12,47 +12,4 @@
 @import "cards";
 @import "container-show";
 @import "boats";
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
-
-div.main_container {
-  width: 1000px;
-  height: auto;
-  margin: 40px auto;
-  padding: 30px 20px;
-  background-color: rgba(255,140,0,0.6);
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.card-product {
-  width: 450px;
-  border-radius: 5px;
-}
-div.card-product-infos ul{
-  padding: 0;
-}
-.card-product-infos li {
-  list-style-type: none;
-}
-.card-product-infos p {
-  color: black;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-}
-.go_back_link {
-  margin-left: 260px;
-  background-color: lightgray;
-  padding: 5px 20px;
-  border-radius: 5px;
-  color: black;
-  box-shadow: 2px 2px 2px black;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700px;
-}
-.go_back_link:hover {
-  text-decoration: none;
-  color: rgb(255,140,0)
-}
+@import "login";
