@@ -1,17 +1,19 @@
-<% @boats.each do |boat| %>
-  <%= link_to boat_path(boat) do %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <ul>
-          <li><p>User: <%= boat.user %></p></li>
-          <li><p>Boat name: <%= boat.title %></p></li>
-          <li><p>Location: <%= boat.location %></p></li>
-          <li><p>Description: <%= boat.description %></p></li>
-          <li><p>Price per day: <%= boat.price_per_day %>$</p></li>
-        </ul>
+<div class="main_container">
+  <% @boats.each do |boat| %>
+    <%= link_to boat_path(boat) do %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <ul>
+            <li><p>User: <%= boat.user %></p></li>
+            <li><p>Boat name: <%= boat.title %></p></li>
+            <li><p>Location: <%= boat.location %></p></li>
+            <li><p>Description: <%= boat.description %></p></li>
+            <li><p>Price per day: <%= boat.price_per_day %>$</p></li>
+          </ul>
+        </div>
       </div>
-    </div>
-<% end %>
-<% end %>
+    <% end %>
+  <% end %>
+</div>
 <%= link_to 'Back', root_path %>
