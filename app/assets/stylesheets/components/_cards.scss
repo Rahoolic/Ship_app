@@ -13,3 +13,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+.main_container > a:hover {
+  text-decoration: none;
+}
+
+.main_container > a:hover > .card-product {
+  opacity: 0.9;
+}
