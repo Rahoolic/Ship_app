@@ -14,20 +14,27 @@
 <form action="" method="get">
   <div class="product-search">
       <div class="search-element">
-        <label class="search-label">Location</label>
-        <input class="search-input" type="text" autocomplete="on" placeholder="Where are you going" name="query">
+        <label class="search-label">Place of departure</label>
+        <input class="search-input" type="text" autocomplete="on" placeholder="Ibiza, Croatia, Sardinia... " name="query">
       </div>
       <div class="search-element">
-        <label class="search-label">Check in</label>
-        <input class="search-input" type="text" placeholder="Add dates" class="" autocomplete="on" name="location">
+        <label class="search-label">Starting date</label>
+        <input class="search-input" type="text" placeholder="DD/MM/YYY" class="" autocomplete="on" name="location">
       </div>
       <div class="search-element">
-        <label class="search-label">Check out</label>
-        <input class="search-input" type="text" placeholder="Add dates" class="" autocomplete="on" name="location">
+        <label class="search-label">Ending date</label>
+        <input class="search-input" type="text" placeholder="DD/MM/YYY" class="" autocomplete="on" name="location">
       </div>
        <div class="search-element">
-        <label class="search-label">Guests</label>
-        <input class="search-input" type="text" placeholder="Add guests" class="" autocomplete="on" name="location">
+        <label class="search-label">Yacht type</label>
+        <div class="div-style">
+         <select name="boat-type" id="boat-types">
+          <option value="Motor Yachts">Motor Yachts</option>
+          <option value="Sailing Yachts">Sailing Yachts</option>
+          <option value="Expedition Yachts">Expedition Yachts</option>
+          <option value="Classic Yachts">Classic Yachts</option>
+        </select>
+        </div>
       </div>
       <a type="submit" class="search-button">Search</a>
   </div>
