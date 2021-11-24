@@ -1,3 +1,3 @@
 class BookingsController < ApplicationController
-  authorize @booking
+  ## authorize @booking
 end
