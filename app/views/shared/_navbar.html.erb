@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="position: relative;">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "Logo.png" %>
   <% end %>
@@ -7,6 +7,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <div class="search" style="position: absolute; left: 250px;">
+    <input type="text" placeholder="Search..">
+    <a href="#"><i class="fas fa-search"></i></a>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -35,7 +39,6 @@
            <%= link_to "Account", "#", class: "dropdown-item" %>
            <%= link_to "Help", "#", class: "dropdown-item" %>
            <%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "dropdown-item" %> <% link_to user_session, class: "nav-link" %>
-
         </div>
       </li>
     </ul>
