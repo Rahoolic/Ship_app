@@ -30,7 +30,7 @@
       <li class="nav-item">
         <%= link_to "My Yachts", dashboard_path, class: "nav-link" %>
       </li>
-      <% end %>
+
       <li class="nav-item dropdown">
         <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -42,6 +42,11 @@
            <%= link_to "Help", "#", class: "dropdown-item" %>
            <%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "dropdown-item" %> <% link_to user_session, class: "nav-link" %>
         </div>
+      </li>
+      <% else %>
+      <li class="nav-item">
+       <%= link_to "Login", new_user_session_path, class: "nav-link"%>
+      <% end %>
       </li>
     </ul>
   </div>
