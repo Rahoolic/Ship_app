@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: C8C2BC;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,7 +15,7 @@
 
 .navbar-brand {
   // height: 40px;
-  width: 150px;
+  width: 180px;
 }
 
 // .active .nav-link {
@@ -26,22 +28,23 @@
 
 /* Style the links inside the navigation bar */
 .nav-item {
+  width: auto;
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 5px 8px 5px;
   text-decoration: none;
   font-size: 17px;
   border-bottom: 3px solid transparent;
 }
 
 .nav-item:hover {
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid rgb(255,165,0);
 }
 
 .nav-item:active {
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid rgb(255,165,0);
 }
 
 .dropdown-yacht {
@@ -52,4 +55,25 @@
   font-size: 1.2em;
   line-height: 1.2em;
   margin-top: 5px;
+}
+.search > a {
+  color: rgb(255,165,0);
+  font-size: 22px;
+  padding: 0 5px;
+
+}
+div.search > a:hover {
+  color: rgb(100,100,100);
+}
+.search .search-input {
+  border-radius: 20px;
+  padding: 3px 10px;
+  border: 2px solid grey;
+}
+.dropdown-item:hover {
+  background-color: rgba(255,165,0,0.4);
+}
+::placeholder {
+  padding: 10px;
+  font-size: 17px;
 }
