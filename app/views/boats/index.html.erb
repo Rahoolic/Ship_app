@@ -6,7 +6,7 @@
       <% @boats.each do |boat| %>
         <%= link_to boat_path(boat), class: "card-link" do %>
           <div class="card-product">
-            <img src="https://www.seekpng.com/png/detail/271-2713081_sailboat-silhouette-blue-sail-boat-logo.png" />
+            <%# <img src="https://www.seekpng.com/png/detail/271-2713081_sailboat-silhouette-blue-sail-boat-logo.png" /> %>
             <div class="card-product-infos">
               <h2><%= boat.title %></h2>
               <p><i class="fas fa-map-marked-alt"></i> <%= boat.location %></p>

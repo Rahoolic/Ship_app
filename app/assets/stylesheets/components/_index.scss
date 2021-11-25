@@ -13,5 +13,8 @@
 @import "container-show";
 @import "boats";
 @import "login";
-@import "footer";
 @import "edit-page";
+@import "footer";
+.main-section{
+  min-height: 100vh;
+}
