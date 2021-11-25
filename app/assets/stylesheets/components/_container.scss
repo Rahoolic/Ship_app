@@ -1,9 +1,21 @@
 .container {
-  color: white;
+  color: black;
   padding: 8px 24px;
   background: none;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.9;
   transition: opacity 0.3s ease;
+  object-fit: contain;
+}
+
+#map {
+  margin-left: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.index-container {
+  display: flex;
+  justify-content: space-between;
 }
