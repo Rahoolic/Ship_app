@@ -14,3 +14,24 @@ opacity: 0.65;
 color: white;
 text-decoration: none;
 }
+
+.back-button a {
+padding:0.35em 1.2em;
+border:0.1em solid #838080;
+background-color: rgb(219, 219, 219);
+margin: 4px;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#746767;
+}
+
+.back-button :hover{
+background-color: rgb(233, 221, 221);
+}
+
+.Show-buttons {
+display: inline-flex;
+}
