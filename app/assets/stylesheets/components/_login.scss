@@ -1,0 +1,32 @@
+.login {
+  background: #F6F5F7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: ‘Montserrat’, sans-serif;
+	height: 80vh;
+	margin: -20px 0 50px;
+
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+	margin: 0;
+}
+
+.box {
+  padding: 10px;
+  background-color: #F7F7F7;
+  border-radius: 10px;
+  border: 1px solid rgb(236, 234, 234);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+
+}
+
+.btn {
+  background-color: #ebe8e8;
+  border: 1px solid rgb(182, 178, 178);
+  border-radius: 2px;
+}

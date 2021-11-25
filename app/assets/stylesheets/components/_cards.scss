@@ -1,5 +1,7 @@
 .boat-card {
-  margin: 10px 40px;
+  margin: 10px 20%;
+  padding: 5px;
+  box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.2);
 }
 
 .banner-card {
@@ -12,4 +14,13 @@
 .card-trip-infos {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+}
+
+.main_container > a:hover {
+  text-decoration: none;
+}
+
+.main_container > a:hover > .card-product {
+  opacity: 0.9;
 }
