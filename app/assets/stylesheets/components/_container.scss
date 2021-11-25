@@ -1,5 +1,5 @@
 .container {
-  color: white;
+  color: black;
   padding: 8px 24px;
   border: 1px solid #4A4A4A;
   border-radius: 4px;
@@ -8,4 +8,9 @@
   font-weight: lighter;
   opacity: 0.9;
   transition: opacity 0.3s ease;
+  object-fit: contain;
+}
+
+#map {
+  display: flex;
 }
