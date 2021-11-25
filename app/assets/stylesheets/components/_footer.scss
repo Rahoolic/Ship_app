@@ -1,0 +1,38 @@
+
+.footer {
+  background: #C8C2BC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 170px;
+  padding: 20px 50px 25px 50px;
+}
+.footer-links {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: rgba(255,165,0,1);
+
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  color: black;
+}
+.footer-logo {
+  padding: 5px;
+  width: 130px;
+  height: auto;
+}
+p.footer-copyright {
+  margin: 2px 0;
+  padding: 5px;
+  padding-top: 10px;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
