@@ -23,18 +23,22 @@ puts "Users destroyed"
 
 puts "Creating users"
 User.create!(
+  name: "Raul",
   email: "raul@test.com",
   password: "123456"
 )
 User.create!(
+  name: "Denise",
   email: "denise@test.com",
   password: "123456"
 )
 User.create!(
+  name: "Felix",
   email: "felix@test.com",
   password: "123456"
 )
 User.create!(
+  name: "Isabelle",
   email: "isabelle@test.com",
   password: "123456"
 )
@@ -42,19 +46,21 @@ puts "Users created"
 
 5.times do
   User.create!(
+    name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password
   )
 end
 
 puts "Creating boats"
+locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina"]
 users = User.all
 users.each do |user|
   rand(5..10).times do
     Boat.create!(
       user: user,
       title: Faker::Name.name,
-      location: Faker::Address.city,
+      location: locations[rand(0...locations.length)],
       description: Faker::Lorem.paragraph(sentence_count: 3),
       price_per_day: Faker::Number.decimal(l_digits: 3)
     )
