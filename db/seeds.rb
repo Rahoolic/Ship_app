@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-Quotes = ["Classic yacht Moonbeam of Fife III has an array of charter-focused amenities to ensure a memorable experience onboard whatever the destination.", "The 73.6m/2416 expedition yacht Naia (ex. Pegaso) by the Spanish Freire Shipyard offers flexible accommodation for up to 12 guests in 8 cabins and features interior styling by British designer Mark Berryman Design."]
-
 puts "Destroying boats"
 Boat.destroy_all
 puts "Boats destroyed"
@@ -17,36 +15,26 @@ puts "Destroying users"
 User.destroy_all
 puts "Users destroyed"
 
-##1.time do |user|
-##  User.create!(
-##   email: test@test.com
-##  )
-##end
-
 puts "Creating users"
 User.create!(
   name: "Raul",
   email: "raul@test.com",
-  password: "123456",
-  name: "Raul"
+  password: "123456"
 )
 User.create!(
   name: "Denise",
   email: "denise@test.com",
-  password: "123456",
-  name: "Denise"
+  password: "123456"
 )
 User.create!(
   name: "Felix",
   email: "felix@test.com",
-  password: "123456",
-  name: "Felix"
+  password: "123456"
 )
 User.create!(
   name: "Isabelle",
   email: "isabelle@test.com",
-  password: "123456",
-  name: "Isabelle"
+  password: "123456"
 )
 puts "Users created"
 
@@ -54,13 +42,13 @@ puts "Users created"
   User.create!(
     name: Faker::Name.name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password,
-    name: Faker::Name.name_with_middle
+    password: Faker::Internet.password
   )
 end
 
 puts "Creating boats"
 locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina"]
+Quotes = ["Classic yacht Moonbeam of Fife III has an array of charter-focused amenities to ensure a memorable experience onboard whatever the destination.", "The 73.6m/2416 expedition yacht Naia (ex. Pegaso) by the Spanish Freire Shipyard offers flexible accommodation for up to 12 guests in 8 cabins and features interior styling by British designer Mark Berryman Design."]
 users = User.all
 users.each do |user|
   rand(5..10).times do
