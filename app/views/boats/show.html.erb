@@ -9,11 +9,22 @@
   </div>
   <div class="card-trip-infos">
     <div>
-      <h2> <strong>Title:</strong> <%= @boat.title %></h2>
-      <p>Owner:<%=  %></p>
+      <h2> <%= @boat.title %></h2>
+      <p>Owner: <%= @boat.user.name %></p>
       <p><%= @boat.description %></p>
-      <%= link_to 'Edit', edit_boat_path(@boat) %> |
-      <%= link_to 'Back', boats_path %>
+      <div class="Show-buttons">
+        <div class="back-button">
+          <%= link_to 'Back', boats_path %>
+        </div>
+        <% if current_user.id == @boat.user_id %>
+        <div class="back-button">
+        <%= link_to 'Edit', edit_boat_path(@boat) %>
+        </div>
+        <div class="back-button">
+        <%= link_to 'Delete', boats_path,method: :delete %>
+        </div>
+        <% end %>
+      </div>
     </div>
     <h2 class="card-trip-pricing"><%= @boat.price_per_day %>$</h2>
     </div>
