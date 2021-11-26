@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="position: relative;">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "Logo.png" %>
   <% end %>
@@ -7,10 +7,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="search d-flex align-items-center" style="position: absolute; left: 250px; align-items: center;">
-    <input type="text" placeholder="Search.." class="search-input">
-    <a href="#"><i class="fas fa-search"></i></a>
-  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -19,12 +15,6 @@
       </li>
       <li class="nav-item">
         <%= link_to "Yachts", boats_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Destinations", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Events", "#", class: "nav-link" %>
       </li>
       <% if user_signed_in? %>
       <li class="nav-item">
@@ -41,6 +31,7 @@
            <%= link_to "Account", "#", class: "dropdown-item" %>
            <%= link_to "Help", "#", class: "dropdown-item" %>
            <%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "dropdown-item" %> <% link_to user_session, class: "nav-link" %>
+
         </div>
       </li>
       <% else %>

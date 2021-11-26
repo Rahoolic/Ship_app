@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-
-Quotes = ["Classic yacht Moonbeam of Fife III has an array of charter-focused amenities to ensure a memorable experience onboard whatever the destination.", "The 73.6m/2416 expedition yacht Naia (ex. Pegaso) by the Spanish Freire Shipyard offers flexible accommodation for up to 12 guests in 8 cabins and features interior styling by British designer Mark Berryman Design."]
+require "open-uri"
 
 puts "Destroying boats"
 Boat.destroy_all
@@ -17,36 +16,26 @@ puts "Destroying users"
 User.destroy_all
 puts "Users destroyed"
 
-##1.time do |user|
-##  User.create!(
-##   email: test@test.com
-##  )
-##end
-
 puts "Creating users"
 User.create!(
   name: "Raul",
   email: "raul@test.com",
-  password: "123456",
-  name: "Raul"
+  password: "123456"
 )
 User.create!(
   name: "Denise",
   email: "denise@test.com",
-  password: "123456",
-  name: "Denise"
+  password: "123456"
 )
 User.create!(
   name: "Felix",
   email: "felix@test.com",
-  password: "123456",
-  name: "Felix"
+  password: "123456"
 )
 User.create!(
   name: "Isabelle",
   email: "isabelle@test.com",
-  password: "123456",
-  name: "Isabelle"
+  password: "123456"
 )
 puts "Users created"
 
@@ -54,23 +43,26 @@ puts "Users created"
   User.create!(
     name: Faker::Name.name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password,
-    name: Faker::Name.name_with_middle
+    password: Faker::Internet.password
   )
 end
 
 puts "Creating boats"
+image_url = "https://d18mr9iuob0gar.cloudfront.net/media/boats/2016/10/rental-Motor-boat-Princess-72feet-Lisbon-PT_ndZ2wvC.jpg"
 locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina"]
+Quotes = ["Classic yacht Moonbeam of Fife III has an array of charter-focused amenities to ensure a memorable experience onboard whatever the destination.", "The 73.6m/2416 expedition yacht Naia (ex. Pegaso) by the Spanish Freire Shipyard offers flexible accommodation for up to 12 guests in 8 cabins and features interior styling by British designer Mark Berryman Design."]
 users = User.all
 users.each do |user|
   rand(5..10).times do
-    Boat.create!(
+    boat = Boat.create!(
       user: user,
       title: Faker::Name.name,
       location: locations[rand(0...locations.length)],
       description: Quotes.sample,
       price_per_day: Faker::Number.decimal(l_digits: 3)
     )
+    file = URI.open(image_url)
+    boat.photo.attach(io: file, filename: 'default-boat.png', content_type: 'image/png')
   end
 end
 puts "Boats created"

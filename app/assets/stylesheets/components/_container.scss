@@ -1,12 +1,36 @@
-.container {
+.container-1 {
   color: black;
+  width: 600px;
   padding: 8px 24px;
   background: none;
-  border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.9;
   transition: opacity 0.3s ease;
   object-fit: contain;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+.container {
+color: black;
+padding: 8px 24px;
+background: none;
+border-radius: 50px;
+font-weight: lighter;
+opacity: 0.9;
+transition: opacity 0.3s ease;
+-o-object-fit: contain;
+object-fit: contain;
+}
+
+.index-container {
+color: black;
+padding: 8px 24px;
+background: none;
+border-radius: 50px;
+font-weight: lighter;
+opacity: 0.9;
+transition: opacity 0.3s ease;
+-o-object-fit: contain;
+object-fit: contain;
 }
 
 #map {
@@ -19,3 +43,4 @@
   display: flex;
   justify-content: space-between;
 }
+
