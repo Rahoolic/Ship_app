@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require "open-uri"
 
 puts "Destroying boats"
 Boat.destroy_all
@@ -47,18 +48,21 @@ puts "Users created"
 end
 
 puts "Creating boats"
+image_url = "https://d18mr9iuob0gar.cloudfront.net/media/boats/2016/10/rental-Motor-boat-Princess-72feet-Lisbon-PT_ndZ2wvC.jpg"
 locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina"]
 Quotes = ["Classic yacht Moonbeam of Fife III has an array of charter-focused amenities to ensure a memorable experience onboard whatever the destination.", "The 73.6m/2416 expedition yacht Naia (ex. Pegaso) by the Spanish Freire Shipyard offers flexible accommodation for up to 12 guests in 8 cabins and features interior styling by British designer Mark Berryman Design."]
 users = User.all
 users.each do |user|
   rand(5..10).times do
-    Boat.create!(
+    boat = Boat.create!(
       user: user,
       title: Faker::Name.name,
       location: locations[rand(0...locations.length)],
       description: Quotes.sample,
       price_per_day: Faker::Number.decimal(l_digits: 3)
     )
+    file = URI.open(image_url)
+    boat.photo.attach(io: file, filename: 'default-boat.png', content_type: 'image/png')
   end
 end
 puts "Boats created"
