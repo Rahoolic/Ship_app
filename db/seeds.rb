@@ -48,8 +48,9 @@ puts "Users created"
 end
 
 puts "Creating boats"
+locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina", "Vaxholm Marina", "Porto Cervo", "Port Portofino", "Port Pierre Canto", "Port de Saint Tropez",
+   "Marina Santa Eulàlia"]
 image_url = "https://d18mr9iuob0gar.cloudfront.net/media/boats/2016/10/rental-Motor-boat-Princess-72feet-Lisbon-PT_ndZ2wvC.jpg"
-locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina"]
 Quotes = ["Classic yacht Moonbeam of Fife III has an array of charter-focused amenities to ensure a memorable experience onboard whatever the destination.", "The 73.6m/2416 expedition yacht Naia (ex. Pegaso) by the Spanish Freire Shipyard offers flexible accommodation for up to 12 guests in 8 cabins and features interior styling by British designer Mark Berryman Design."]
 users = User.all
 users.each do |user|
@@ -57,7 +58,7 @@ users.each do |user|
     boat = Boat.create!(
       user: user,
       title: Faker::Name.name,
-      location: locations[rand(0...locations.length)],
+      location: locations.sample,
       description: Quotes.sample,
       price_per_day: Faker::Number.decimal(l_digits: 3)
     )

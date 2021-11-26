@@ -16,7 +16,7 @@
         <div class="back-button">
           <%= link_to 'Back', boats_path %>
         </div>
-        <% if user_signed_in? && current_user.id == @boat.user_id %>
+        <% if current_user == @boat.user %>
         <div class="back-button">
         <%= link_to 'Edit', edit_boat_path(@boat) %>
         </div>
