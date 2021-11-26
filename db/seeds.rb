@@ -27,26 +27,22 @@ puts "Creating users"
 User.create!(
   name: "Raul",
   email: "raul@test.com",
-  password: "123456",
-  name: "Raul"
+  password: "123456"
 )
 User.create!(
   name: "Denise",
   email: "denise@test.com",
-  password: "123456",
-  name: "Denise"
+  password: "123456"
 )
 User.create!(
   name: "Felix",
   email: "felix@test.com",
-  password: "123456",
-  name: "Felix"
+  password: "123456"
 )
 User.create!(
   name: "Isabelle",
   email: "isabelle@test.com",
-  password: "123456",
-  name: "Isabelle"
+  password: "123456"
 )
 puts "Users created"
 
