@@ -4,7 +4,7 @@
   <%= f.input :location %>
   <%= f.input :description %>
   <%= f.input :price_per_day %>
-  <%= f.input :boat_type %>
+  <%= f.input :boat_type, collection: ['Motor Yachts', 'Sailing Yachts', 'Expedition Yachts', 'Classic Yachts'] %>
   <%= f.submit %>
-<% end %>
 </div>
+<% end %>

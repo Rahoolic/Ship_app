@@ -42,28 +42,18 @@ body {
 }
 
 .search-button {
-  display: inline-block;
-  flex-grow: 1;
-  height: 70px;
-  width: 40px;
-  line-height: 80px;
-  margin: 5px 0px 0px;
-  padding: 0 2em;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 100;
-  border: 0;
-  border-top-left-radius:25px;
-  border-top-right-radius:25px;
-  border-bottom-right-radius:25px;
-  border-bottom-left-radius:25px;
-  color: white;
+  color: black;
+  border: rgb(168, 164, 164);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
   background-color: tomato;
-  transition: background-color 0.8s ease;
 }
 
 .search-button:hover {
-  opacity: 0,6;
+  opacity: 0.8;
+  text-decoration: none;
 }
 
 .search-input:hover {

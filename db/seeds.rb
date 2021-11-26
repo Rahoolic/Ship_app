@@ -56,14 +56,15 @@ puts "Users created"
 end
 
 puts "Creating boats"
-locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina"]
+locations = ["Marina de Albufeira", "Porto de Aveiro", "Deportivo Del Guadiana Marina", "Doca De Alcantara Marina", "Vaxholm Marina", "Porto Cervo", "Port Portofino", "Port Pierre Canto", "Port de Saint Tropez",
+   "Marina Santa Eulàlia"]
 users = User.all
 users.each do |user|
   rand(5..10).times do
     Boat.create!(
       user: user,
       title: Faker::Name.name,
-      location: locations[rand(0...locations.length)],
+      location: locations.sample,
       description: Quotes.sample,
       price_per_day: Faker::Number.decimal(l_digits: 3)
     )
